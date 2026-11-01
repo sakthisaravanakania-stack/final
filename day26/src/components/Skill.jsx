@@ -27,13 +27,13 @@ const Skill = () => {
           <div className='women'>
           <img src={WomenImg} alt="" />
           </div>
-
+{/* 
           <div className='learn'>
               <h1>Learn <br />
                   Today <br />
                   Lead <br />
               Tomorrow <i class="fa-regular fa-star"></i></h1>
-          </div>
+          </div> */}
 
           <div className='class'>
               <h2><i class="fa-solid fa-video"></i> Live Class</h2>

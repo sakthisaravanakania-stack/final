@@ -1,714 +1,1108 @@
-*{
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-.nav-bar{
-    height: 60px;
-    background-color: darkmagenta;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f8ff;
+    color: #111b3c;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+h2, h3, h4, h5, p {
+    line-height: 1.5;
+}
+
+/* ================= NAVBAR ================= */
+
+.nav-bar {
+    min-height: 65px;
+    background: #091638;
     display: flex;
+    align-items: center;
     justify-content: space-around;
+    padding: 10px 7%;
+    gap: 15px;
 }
 
-.nav-bar h3{
-    color: whitesmoke;
-    font-size: 24px;
+.nav-bar h3 {
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+    padding: 5px;
+}
+
+.nav-bar h4 {
+    color: #e5eaff;
+    font-size: 14px;
+    font-weight: 500;
     padding: 10px;
-}
-.nav-bar h4{
-    padding: 20px;
-}
-
-.nav-bar button{
-    background-color: rgb(219, 128, 63);
-    padding: 7px 10px;
-    font-size: 12px;
-    margin: 15px;
-    border: navajowhite;
-    border-radius: 5px;
     cursor: pointer;
 }
+
+.nav-bar h4:hover {
+    color: #a77aff;
+}
+
+.nav-bar button {
+    background: linear-gradient(90deg, #702ef5, #a33df5);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 11px 22px;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+    transition: 0.3s;
+}
+
+.nav-bar button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px #873aff55;
+}
+
+/* ================= HERO SECTION ================= */
 
 .skill {
-    margin-bottom: 30px;
-
-}
-
-.skills-first button{
-    margin: 20px;
-    padding: 8px 13px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 15px;
-    border: 1px solid;
-    background-color: darkblue;
-    color: white;
-}
-
-.skills-first h2{
-    font-size: 45px;
-    font-weight: 500;
-    font-family: 'Times New Roman', Times, serif;
-    padding: 20px;
-    color: rgb(75, 70, 4);
-}
-
-
-.about-first {
-    margin-top: 20%;
-}
-
-.skills-first p{
-    font-size: 18px;
-    font-weight: 400;
-    padding: 20px;
-}
-
-.btn{
+    min-height: 490px;
+    background:
+        radial-gradient(circle at 75% 50%, #124c9b 0%, transparent 35%),
+        linear-gradient(115deg, #101b43, #07132e);
+    position: relative;
+    overflow: hidden;
+    padding: 75px 8% 50px;
     display: flex;
-    justify-content: center;
-
+    flex-direction: column;
 }
 
-.btn button{
-  border-radius: 10px;
-    font-size: 16px;
-    padding: 10px 12px;
-    font-weight: bold;
-    border: 1px solid ;
-    background-color: darkcyan;
+.skill::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: #5525c9;
+    filter: blur(120px);
+    opacity: 0.35;
+    right: 5%;
+    top: 10%;
+}
+
+.skills-first {
+    width: 53%;
+    position: relative;
+    z-index: 2;
+}
+
+.skills-first button {
+    background: transparent;
+    color: #c2a4ff;
+    border: 1px solid #8154ee;
+    border-radius: 30px;
+    padding: 7px 18px;
+    margin: 0 0 15px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.skills-first h2 {
     color: white;
-    margin-bottom: 5px;
-    cursor: pointer;
+    font-size: clamp(35px, 4.2vw, 55px);
+    font-weight: 800;
+    line-height: 1.18;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
-.watch{
+.skills-first h2 br {
+    display: block;
+}
+
+.skills-first h2 i {
+    color: #b25aff;
+    font-style: normal;
+}
+
+.skills-first p {
+    color: #d3ddf5;
+    font-size: 16px;
+    line-height: 1.7;
+    padding: 15px 0;
+    max-width: 490px;
+}
+
+.btn {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 3;
+    margin-top: 5px;
 }
 
-.watch button{
+.btn button {
+    background: linear-gradient(90deg, #702ef5, #a33df5);
+    color: white;
+    border: none;
     border-radius: 10px;
-    font-size: 16px;
-    padding: 10px 12px;
-    font-weight: bold;
-    border: 1px solid ;
-    background-color: rgb(236, 220, 129);
-    color: rgb(105, 33, 33);
-    margin-bottom: 15px;
-    cursor: pointer;
+    padding: 13px 23px;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.watch {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 3;
+    margin-top: -44px;
+    margin-left: 200px;
+}
+
+.watch button {
+    background: transparent;
+    border: 1px solid #a9b7df;
+    color: white;
+    border-radius: 10px;
+    padding: 11px 18px;
+    font-size: 14px;
+    margin: 0;
+}
+
+.watch button:hover {
+    background: #ffffff18;
+}
+
+.women {
+    position: absolute;
+    right: 7%;
+    top: 35px;
+    width: 43%;
+    height: 390px;
+    margin: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .women img {
-width: 300px;
-height: 300px;
-margin-top: -35%;
-border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin: 0;
+    border-radius: 20px;
 }
 
-.women{
-    margin-top: -20%;
-    margin-left: 75%;
+.learn {
+    position: absolute;
+    right: 3%;
+    top: 30px;
+    margin: 0;
+    color: #c88bff;
+    font-size: 16px;
+    font-weight: 600;
+    transform: rotate(8deg);
+    z-index: 2;
 }
 
-.learn{
-    margin-top: -20%;
-    margin-left: 35%;
+.class {
+    position: relative;
+    z-index: 3;
+    margin: 25px 0 0;
+    display: flex;
+    gap: 35px;
+    color: white;
 }
 
-.class{
-     margin-top: -12%;
-    margin-left: 59%;
+.class h2 {
+    font-size: 16px;
+    font-weight: 600;
 }
 
-
-.about-first{
-    padding: 30px;
-    margin-bottom: 50px;
+.class i {
+    color: #9a75ff;
+    margin-right: 8px;
 }
 
-.about-first img{
-    width: 400px;
+/* ================= ABOUT SECTION ================= */
+
+.about {
+    background: #fff;
+    padding: 40px 8%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-first {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-first img {
+    width: 100%;
+    max-width: 400px;
     height: 300px;
+    object-fit: contain;
 }
 
-.about-second{
-    margin-top: -28%;
-    margin-left: 40%;
+.about-second {
+    margin: 0;
+    padding: 10px;
 }
 
-.about-second h4{
-    color: blue;
-    font-size: 35px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+.about-second h4 {
+    color: #7137c9;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-second h5 {
+    color: #101a3c;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+.about-second p {
+    color: #596174;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.about-third {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    color: #17264a;
+    font-size: 13px;
+    margin: 0;
+    padding: 5px;
+}
+
+.about-third h3 {
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.about-third i {
+    color: #7544eb;
+    font-size: 21px;
+}
+
+/* ================= COURSES SECTION ================= */
+
+.course {
+    padding: 45px 8%;
+    background: #f0f6ff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.courde-first {
+    grid-column: 1 / -1;
+    padding: 0 0 15px;
+}
+
+.courde-first h3 {
+    color: #7541cb;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
     margin-bottom: 5px;
 }
 
-.about-second h5{
-    font-size: 28px;
-    font-weight: 200;
-    margin-bottom: 4px;
-}
-
-.about-second p{
-    font-size: 20px;
-}
-
-
-.about-third{
-    font-size: 20px;
-    color: darkgreen;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 8%;
-    margin-bottom: 20px;
-}
-
-.courde-first{
-    padding: 30px;
-}
-
-.courde-first h3{
-    font-weight: 900;
-    font-size: 32px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: chartreuse;
-}
-
-.courde-first h5{
-    font-size: 22px;
+.courde-first h5 {
+    font-size: 29px;
+    font-weight: 800;
+    color: #101a3c;
 }
 
 .course-image {
-    display: flex;
-    justify-content: center;
-    gap: 150px;
+    display: contents;
 }
 
-.course-image img{
-    width: 300px;
-    height: 300px;
+.course-image img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    padding: 7px;
+    background: white;
+    box-shadow: 0 5px 20px #253c6410;
 }
 
-.subject{
-    margin-left: 8%;
+.subject,
+.subject1,
+.subject2 {
+    background: white;
+    padding: 12px;
+    border-radius: 0 0 12px 12px;
+    margin: -15px 0 0;
+    box-shadow: 0 8px 20px #253c6410;
+    min-width: 0;
 }
 
-.subject1 {
-    margin-left: 42%;
-    margin-top: -10%;
+.subject h3,
+.subject1 h3,
+.subject2 h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111b3c;
+    margin-bottom: 5px;
 }
 
-.subject2{
-    margin-left: 75%;
-    margin-top: -10%;
-    margin-bottom: 50px;
+.subject h5,
+.subject1 h5,
+.subject2 h5 {
+    color: #687184;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 8px;
 }
 
-
-.choose-first{
-    padding: 30px;
-}
-.choose-first h2{
-    font-size: 32px;
-    color: darkorchid;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-bottom: 3px;
+.subject p,
+.subject1 p,
+.subject2 p {
+    color: #7541cb;
+    font-size: 12px;
+    margin: 5px 0;
 }
 
-.choose-first h5{
-    font-size: 20px;
-    font-weight: 200;
+.subject h4,
+.subject1 h4,
+.subject2 h4 {
+    font-size: 12px;
+    color: #69758b;
+    margin: 5px 0;
 }
 
-.choose-second {
-  margin-left: 30px;
-}
-.choose-third{
-    margin-top: -6%;
-    margin-left: 35%;
-}
-
-.choose-fourth{
-    margin-top: -4.5%;
-    margin-left: 65%;
-    margin-bottom: 40px;
+.subject h2,
+.subject1 h2,
+.subject2 h2 {
+    color: #111b3c;
+    font-size: 19px;
+    font-weight: 800;
 }
 
-.student-first{
-    margin-left: 30px;
+/* ================= WHY CHOOSE US ================= */
+
+.choose {
+    padding: 40px 8%;
+    background: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
 }
 
-.student-first h2{
-    font-size: 32px;
-    color: darkturquoise;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 300;
+.choose-first {
+    grid-column: 1 / -1;
+    padding: 0 0 10px;
 }
 
-.student-first h4{
-    font-weight: 200;
-    font-size: 24px;
-    margin-bottom: 10px;
+.choose-first h2 {
+    color: #7541cb;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
 }
 
-
-.student-second{
-    margin-left: 30px;
+.choose-first h5 {
+    font-size: 28px;
+    color: #101a3c;
+    font-weight: 800;
 }
 
-.student-third{
-    margin-top: -10%;
-    margin-left: 35%;
+.choose-second,
+.choose-third,
+.choose-fourth {
+    margin: 0;
+    padding: 22px;
+    background: #f2edff;
+    border-radius: 15px;
+    min-height: 130px;
+    transition: 0.3s;
 }
 
-.student-fourth{
-    margin-top: -10%;
-    margin-left: 70%;
-    margin-bottom: 60px;
+.choose-third {
+    background: #e9f5ff;
 }
 
-
-.faq-first{
-    margin-left: 30px;
+.choose-fourth {
+    background: #e5fbfa;
 }
 
-.faq-image{
-    margin-top: -6%;
-    margin-left: 25%;
+.choose-second:hover,
+.choose-third:hover,
+.choose-fourth:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px #283b6115;
 }
 
-
-.faq-second{
-    margin-top: -8%;
-    margin-left: 40%;
+.choose-second h2,
+.choose-third h2,
+.choose-fourth h2 {
+    color: #17264a;
+    font-size: 17px;
+    margin-bottom: 5px;
 }
 
-.faq-third{
-    margin-left: 40%;
-}
-.faq-fourth{
-    margin-left: 40%;
-    margin-bottom: 80px;
+.choose-second h5,
+.choose-third h5,
+.choose-fourth h5 {
+    color: #626d80;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.6;
 }
 
-.contact-image{
-    margin-left: 30px;
+/* ================= STUDENT TESTIMONIALS ================= */
 
+.student {
+    padding: 45px 8%;
+    background: #eef5ff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
 }
-.contact{
-    background-color: lightblue;
-    height: 180px;
-    
+
+.student-first {
+    grid-column: 1 / -1;
+    margin: 0;
 }
-.contact-image{
+
+.student-first h2 {
+    color: #7541cb;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+
+.student-first h4 {
+    font-size: 28px;
+    color: #101a3c;
+    font-weight: 800;
+}
+
+.student-second,
+.student-third,
+.student-fourth {
+    background: white;
+    border-radius: 15px;
     padding: 20px;
+    margin: 0;
+    box-shadow: 0 5px 20px #253c6410;
+    min-height: 150px;
 }
 
-.contact-first h2{
-    font-size: 35px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color:darkgoldenrod;
-    font-weight: 300;
-    margin-left: 25%;
-    margin-top: -10%;
+.student-second h1,
+.student-third h1,
+.student-fourth h1 {
+    color: #17264a;
+    font-size: 15px;
     margin-bottom: 5px;
 }
 
-.contact-first h3{
-    margin-bottom: 5px;
-    font-size: 22px;
-    margin-left: 25%;
+.student-second h2,
+.student-third h2,
+.student-fourth h2 {
+    color: #eab308;
+    font-size: 15px;
+    margin-bottom: 8px;
 }
 
-.contact-first p{
-    margin-left: 25%;
+.student-second p,
+.student-third p,
+.student-fourth p {
+    color: #606b7e;
+    font-size: 13px;
+    line-height: 1.7;
 }
 
-.contact-second{
-    margin-left: 60%;
-    margin-top: -8%;
+/* ================= FAQ SECTION ================= */
+
+.faq {
+    padding: 40px 8%;
+    background: white;
+    display: grid;
+    grid-template-columns: 32% 68%;
+    gap: 12px;
+    align-items: start;
 }
 
-input[type="text"]{
-    border: 1px solid;
+.faq-first {
+    margin: 0;
+    padding-top: 15px;
+}
+
+.faq-first h2 {
+    color: #7541cb;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.faq-first h3 {
+    color: #101a3c;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.faq-image {
+    display: none;
+}
+
+.faq-second,
+.faq-third,
+.faq-fourth {
+    margin: 0 0 8px;
+    padding: 15px;
+    background: #f9faff;
+    border: 1px solid #e6e9f3;
+    border-radius: 10px;
+    grid-column: 2;
+}
+
+.faq-second h2,
+.faq-third h2,
+.faq-fourth h2 {
     font-size: 14px;
-    padding: 7px 130px;
-    border-radius: 4px;
-   margin-bottom: 5px;
+    color: #17264a;
+    font-weight: 600;
 }
 
-
-.contact-btn{
-    margin-left: 60%;
+.faq-second p {
+    color: #687184;
+    font-size: 12px;
+    margin-top: 8px;
 }
 
-.contact-btn button{
-    border: navajowhite;
-    background-color: blueviolet;
-    color: whitesmoke;
-    border: 1px solid;
-    font-size: 14px;
-    padding: 7px 170px;
-    border-radius: 4px;
-    cursor: pointer;
+/* ================= CONTACT SECTION ================= */
+
+.contact {
+    background: #f0edff;
+    padding: 30px 8%;
+    min-height: 200px;
+    display: grid;
+    grid-template-columns: 17% 32% 51%;
+    gap: 10px;
+    align-items: center;
+    height: auto;
 }
 
+.contact-image {
+    margin: 0;
+    padding: 0;
+}
 
-.final{
-    background-color: black;
-    height: 120px;
+.contact-image img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.contact-first {
+    margin: 0;
+}
+
+.contact-first h2 {
+    color: #7541cb;
+    font-size: 13px;
+    margin: 0 0 5px;
+    font-weight: 700;
+}
+
+.contact-first h3 {
+    color: #101a3c;
+    font-size: 26px;
+    margin: 0 0 8px;
+}
+
+.contact-first p {
+    color: #5c6478;
+    font-size: 12px;
+    margin: 0;
+    line-height: 1.7;
+}
+
+.contact-second {
+    margin: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+input[type="text"] {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #d7d9e8;
+    border-radius: 7px;
+    background: white;
+    font-size: 12px;
+    margin: 0;
+}
+
+.contact-btn {
+    margin: 0;
+    grid-column: 3;
+    width: 100%;
+}
+
+.contact-btn button {
+    width: 100%;
+    background: linear-gradient(90deg, #7133ef, #9c3cf5);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 12px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* ================= FOOTER ================= */
+
+.final {
+    background: #091638;
+    color: white;
+    height: auto;
+    padding: 30px 8%;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+    gap: 20px;
 }
 
 .final-first {
-    margin-left: 30px;
-    padding: 20px;
-    color: aliceblue;
+    margin: 0;
+    padding: 0;
+    color: white;
 }
 
-.final-first h3{
-font-size: 28px;
-margin-bottom: 4px;
+.final-first h3 {
+    font-size: 25px;
+    margin-bottom: 5px;
 }
-.final-second  {
-    margin-left: 35%;
+
+.final-first p {
+    color: #c4cce0;
+    font-size: 12px;
+}
+
+.final-second,
+.final-third {
+    margin: 0;
     color: white;
-    margin-top: -6%;
 }
-.final-third{
-    margin-left: 70%;
-    color: white;
-    margin-top: -6%;
+
+.final-second h3,
+.final-third h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
 }
-.icons{
+
+.final-second h4 {
+    color: #c4cce0;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.final-third h2 {
+    margin-bottom: 12px;
+}
+
+.icons {
     display: flex;
-    color: whitesmoke;
-    margin-left: 70%;
+    gap: 15px;
+    margin: 0;
+    color: white;
 }
 
+.icons h3 {
+    background: #243a69;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
+.icons h3:hover {
+    background: #7944ed;
+    transform: translateY(-3px);
+}
 
+/* ================= TABLET RESPONSIVE ================= */
 
-
-@media screen and (max-width: 1075px) {
-
-    * {
-        box-sizing: border-box;
-    }
-
-    body {
-        overflow-x: hidden;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    /* Navbar */
+@media screen and (max-width: 1024px) {
 
     .nav-bar {
-        height: auto;
-        min-height: 60px;
-        display: flex;
+        padding: 10px 3%;
         flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-        gap: 5px;
     }
-
-    .nav-bar h3 {
-        font-size: 22px;
-    }
-
-    .nav-bar h4 {
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    .nav-bar button {
-        margin: 5px;
-    }
-
-    /* Home Section */
 
     .skill {
-        margin-bottom: 20px;
+        min-height: 450px;
+        padding: 65px 5% 35px;
     }
 
     .skills-first {
-        text-align: center;
-        padding: 15px;
+        width: 55%;
     }
 
     .skills-first h2 {
-        font-size: 35px;
-        padding: 10px;
-    }
-
-    .skills-first p {
-        font-size: 16px;
-        padding: 10px;
-    }
-
-    .skills-first button {
-        margin: 8px;
-        padding: 8px 12px;
-        font-size: 14px;
-    }
-
-    .btn,
-    .watch {
-        justify-content: center;
-        margin: 10px;
+        font-size: 38px;
     }
 
     .women {
-        margin: 20px auto;
+        width: 43%;
+        right: 3%;
+        top: 50px;
+    }
+
+    .about,
+    .course,
+    .choose,
+    .student,
+    .faq,
+    .contact,
+    .final {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .about {
+        grid-template-columns: 40% 60%;
+    }
+
+    .about-third {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .course-image img {
+        height: 130px;
+    }
+
+    .contact {
+        grid-template-columns: 15% 30% 55%;
+    }
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media screen and (max-width: 600px) {
+
+    .nav-bar {
+        justify-content: center;
+        gap: 8px;
+        padding: 12px;
+    }
+
+    .nav-bar h3 {
+        width: 100%;
+        text-align: center;
+        font-size: 23px;
+    }
+
+    .nav-bar h4 {
+        font-size: 11px;
+        padding: 5px;
+    }
+
+    .nav-bar button {
+        font-size: 11px;
+        padding: 8px 12px;
+    }
+
+    /* Hero */
+
+    .skill {
+        padding: 40px 6% 25px;
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-first {
+        width: 100%;
         text-align: center;
     }
 
-    .women img {
-        width: 250px;
-        height: auto;
-        margin-top: 0;
+    .skills-first h2 {
+        font-size: 32px;
     }
 
-    .learn,
+    .skills-first p {
+        font-size: 14px;
+    }
+
+    .skills-first button {
+        margin-bottom: 12px;
+    }
+
+    .btn {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .watch {
+        justify-content: center;
+        margin: 12px 0 0;
+    }
+
+    .women {
+        position: relative;
+        width: 100%;
+        height: 250px;
+        right: auto;
+        top: auto;
+        margin: 20px auto 0;
+    }
+
+    .learn {
+        display: none;
+    }
+
     .class {
-        margin: 20px auto;
-        text-align: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 15px;
     }
 
-    /* About Section */
+    .class h2 {
+        font-size: 12px;
+    }
 
-    .about-first {
-        margin-top: 30px;
-        margin-bottom: 20px;
-        padding: 15px;
+    /* About */
+
+    .about {
+        grid-template-columns: 1fr;
+        padding: 30px 6%;
         text-align: center;
     }
 
     .about-first img {
-        width: 80%;
-        max-width: 400px;
-        height: auto;
+        height: 230px;
     }
 
     .about-second {
-        margin: 20px auto;
-        padding: 15px;
-        text-align: center;
-    }
-
-    .about-second h4 {
-        font-size: 28px;
+        padding: 5px;
     }
 
     .about-second h5 {
-        font-size: 22px;
-    }
-
-    .about-second p {
-        font-size: 16px;
+        font-size: 23px;
     }
 
     .about-third {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 25px;
-        margin: 30px 15px;
-        text-align: center;
+        grid-column: 1;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-top: 10px;
     }
 
-    /* Courses Section */
+    .about-third h3 {
+        font-size: 11px;
+        justify-content: center;
+    }
+
+    /* Courses */
+
+    .course {
+        grid-template-columns: 1fr;
+        padding: 30px 6%;
+        gap: 15px;
+    }
 
     .courde-first {
-        padding: 20px;
-        text-align: center;
-    }
-
-    .courde-first h3 {
-        font-size: 28px;
+        grid-column: 1;
     }
 
     .courde-first h5 {
-        font-size: 19px;
+        font-size: 23px;
     }
 
     .course-image {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 25px;
-        padding: 15px;
+        flex-direction: column;
+        gap: 15px;
     }
 
     .course-image img {
-        width: 250px;
-        height: 230px;
-        object-fit: contain;
+        width: 100%;
+        height: 190px;
+        object-fit: cover;
     }
 
     .subject,
     .subject1,
     .subject2 {
-        margin: 15px auto;
-        text-align: center;
+        margin: -15px 0 0;
     }
 
-    /* Why Choose Us */
+    /* Choose */
+
+    .choose {
+        grid-template-columns: 1fr;
+        padding: 30px 6%;
+    }
 
     .choose-first {
-        padding: 20px;
-        text-align: center;
-    }
-
-    .choose-first h2 {
-        font-size: 28px;
+        grid-column: 1;
     }
 
     .choose-first h5 {
-        font-size: 18px;
+        font-size: 23px;
     }
 
     .choose-second,
     .choose-third,
     .choose-fourth {
-        margin: 25px 15px;
-        text-align: center;
+        min-height: auto;
     }
 
-    /* Student Testimonials */
+    /* Students */
+
+    .student {
+        grid-template-columns: 1fr;
+        padding: 30px 6%;
+    }
 
     .student-first {
-        margin: 20px;
-        text-align: center;
-    }
-
-    .student-first h2 {
-        font-size: 28px;
+        grid-column: 1;
     }
 
     .student-first h4 {
-        font-size: 20px;
+        font-size: 23px;
     }
 
-    .student-second,
-    .student-third,
-    .student-fourth {
-        margin: 25px 15px;
-        text-align: center;
-    }
+    /* FAQ */
 
-    /* FAQ Section */
+    .faq {
+        grid-template-columns: 1fr;
+        padding: 30px 6%;
+    }
 
     .faq-first {
-        margin: 20px;
+        grid-column: 1;
         text-align: center;
     }
 
-    .faq-image {
-        margin: 20px auto;
-        text-align: center;
+    .faq-first h3 {
+        font-size: 24px;
     }
 
     .faq-second,
     .faq-third,
     .faq-fourth {
-        margin: 15px 20px;
-        text-align: center;
+        grid-column: 1;
+        padding: 13px;
     }
 
-    .faq-fourth {
-        margin-bottom: 40px;
-    }
-
-    /* Contact Section */
+    /* Contact */
 
     .contact {
-        height: auto;
-        padding: 20px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
+        grid-template-columns: 1fr;
+        padding: 30px 6%;
+        text-align: center;
     }
 
     .contact-image {
-        margin: 0;
-        padding: 10px;
-        text-align: center;
+        display: flex;
+        justify-content: center;
     }
 
-    .contact-first {
-        text-align: center;
-    }
-
-    .contact-first h2 {
-        font-size: 28px;
-        margin: 10px;
+    .contact-image img {
+        width: 130px;
+        height: 130px;
     }
 
     .contact-first h3 {
-        font-size: 20px;
-        margin: 10px;
-    }
-
-    .contact-first p {
-        margin: 10px;
+        font-size: 23px;
     }
 
     .contact-second {
-        width: 100%;
-        margin: 10px auto;
-        text-align: center;
-    }
-
-    input[type="text"] {
-        width: 90%;
-        max-width: 450px;
-        padding: 10px;
-        margin-bottom: 10px;
+        grid-template-columns: 1fr;
+        gap: 10px;
     }
 
     .contact-btn {
-        margin: 10px auto;
-        text-align: center;
-    }
-
-    .contact-btn button {
-        width: 90%;
-        max-width: 450px;
-        padding: 10px;
+        grid-column: 1;
     }
 
     /* Footer */
 
     .final {
-        height: auto;
-        padding: 20px;
+        grid-template-columns: 1fr 1fr;
+        padding: 30px 6%;
+        text-align: center;
     }
 
     .final-first,
     .final-second,
-    .final-third {
-        margin: 15px auto;
-        padding: 10px;
-        text-align: center;
-    }
-
-    .final-first h3 {
-        font-size: 24px;
+    .final-third,
+    .icons {
+        margin: 0;
     }
 
     .icons {
         justify-content: center;
-        margin: 15px auto;
-        gap: 15px;
+        flex-wrap: wrap;
+    }
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media screen and (max-width: 380px) {
+
+    .nav-bar h4 {
+        font-size: 10px;
+        padding: 3px;
+    }
+
+    .skills-first h2 {
+        font-size: 27px;
+    }
+
+    .about-third {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .final {
+        grid-template-columns: 1fr;
+    }
+
+    .course-image img {
+        height: 160px;
     }
 }

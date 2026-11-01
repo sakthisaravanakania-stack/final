@@ -30,8 +30,7 @@ const Studennt = () => {
               <h2>Data Analyst</h2>
               <p>"Great learning experience! The course content <br />
                   is simple and industry-focused. <br />
-                  Highly recommended."
-</p>
+                  Highly recommended."</p>
           </div>
       
     </div>
